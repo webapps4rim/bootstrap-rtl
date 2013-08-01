@@ -2514,7 +2514,7 @@ button.close {
 
 .nav-justified > li {
   display: table-cell;
-  float: none;
+  float: none !important;
   width: 1%;
 }
 
@@ -2572,7 +2572,7 @@ button.close {
 
 .nav-tabs.nav-justified > li {
   display: table-cell;
-  float: none;
+  float: none !important;
   width: 1%;
 }
 
