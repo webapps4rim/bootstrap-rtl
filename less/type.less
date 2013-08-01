@@ -2,6 +2,9 @@
 // Typography
 // --------------------------------------------------
 
+body {
+  direction: rtl;
+}
 
 // Body text
 // -------------------------
@@ -39,8 +42,8 @@ cite    { font-style: normal; }
 .text-info           { color: @state-info-text; }
 
 // Alignment
-.text-left           { text-align: left; }
-.text-right          { text-align: right; }
+.text-right           { text-align: left; }
+.text-left          { text-align: right; }
 .text-center         { text-align: center; }
 
 
@@ -114,7 +117,7 @@ ol {
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 .list-unstyled {
-  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 // Inline turns list items into inline-block
@@ -122,8 +125,8 @@ ol {
   .list-unstyled();
   > li {
     display: inline-block;
-    padding-left: 5px;
     padding-right: 5px;
+    padding-left: 5px;
   }
 }
 
@@ -139,20 +142,20 @@ dt {
   font-weight: bold;
 }
 dd {
-  margin-left: 0; // Undo browser default
+  margin-right: 0; // Undo browser default
 }
 // Horizontal layout (like forms)
 .dl-horizontal {
   dt {
-    float: left;
+    float: right;
     width: (@component-offset-horizontal - 20);
-    clear: left;
-    text-align: right;
+    clear: right;
+    text-align: left;
     .text-overflow();
   }
   dd {
     .clearfix(); // Clear the floated `dt` if an empty `dd` is present
-    margin-left: @component-offset-horizontal;
+    margin-right: @component-offset-horizontal;
   }
 }
 
@@ -175,7 +178,7 @@ abbr.initialism {
 blockquote {
   padding: (@line-height-computed / 2) @line-height-computed;
   margin: 0 0 @line-height-computed;
-  border-left: 5px solid @blockquote-border-color;
+  border-right: 5px solid @blockquote-border-color;
   p {
     font-size: (@font-size-base * 1.25);
     font-weight: 300;
@@ -195,14 +198,14 @@ blockquote {
 
   // Float right with text-align: right
   &.pull-right {
-    float: right;
-    padding-right: 15px;
-    padding-left: 0;
-    border-right: 5px solid @blockquote-border-color;
-    border-left: 0;
+    float: left;
+    padding-left: 15px;
+    padding-right: 0;
+    border-left: 5px solid @blockquote-border-color;
+    border-right: 0;
     p,
     small {
-      text-align: right;
+      text-align: left;
     }
     small {
       &:before {
